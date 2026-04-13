@@ -4,342 +4,410 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Yash Jadhav — Agentic AI Developer</title>
-  <meta name="description" content="Portfolio of Yash Jadhav — Agentic AI Developer (GenAI, Agentic AI, Geospatial Automation, Python)." />
+  <meta name="description" content="Portfolio of Yash Jadhav — Agentic AI Developer specialising in GenAI, multi-agent systems, geospatial automation, and Python." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#070A12;
-      --panel:#0C1222;
-      --panel2:#0A1020;
-      --text:#EAF0FF;
-      --muted:#A9B4D0;
-      --line:rgba(255,255,255,0.08);
+    :root {
+      --bg: #06080F;
+      --surface: #0B0F1A;
+      --surface2: #0F1420;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
 
-      --accent:#7C5CFF;
-      --accent2:#00D4FF;
-      --good:#35F2A6;
+      --text: #EDF0FA;
+      --muted: #8892AA;
+      --faint: rgba(255,255,255,0.035);
 
-      --shadow: 0 12px 40px rgba(0,0,0,.45);
-      --radius: 16px;
+      --indigo: #6B52FF;
+      --cyan: #00C9E0;
+      --mint: #2EEFAB;
+      --amber: #F5A623;
 
-      --max: 1100px;
-      --pad: 20px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background:
-        radial-gradient(1200px 500px at 15% 0%, rgba(124,92,255,.18), transparent 60%),
-        radial-gradient(900px 450px at 90% 10%, rgba(0,212,255,.12), transparent 55%),
-        radial-gradient(700px 500px at 40% 110%, rgba(53,242,166,.10), transparent 55%),
-        linear-gradient(180deg, #060812, #050713 60%, #040611);
-      line-height:1.55;
-    }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px var(--pad) 72px;}
-    .nav{
-      position:sticky; top:0; z-index:5;
-      backdrop-filter: blur(10px);
-      background: rgba(7,10,18,.55);
-      border-bottom:1px solid var(--line);
-    }
-    .navinner{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:12px var(--pad);
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      font-weight:700; letter-spacing:.2px;
-    }
-    .dot{
-      width:10px; height:10px; border-radius:999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 0 4px rgba(124,92,255,.12);
-    }
-    .navlinks{
-      display:flex; gap:14px; flex-wrap:wrap;
-      font-size:14px;
-      color:var(--muted);
-    }
-    .navlinks a{ text-decoration:none; padding:8px 10px; border-radius:10px; border:1px solid transparent; }
-    .navlinks a:hover{ color:var(--text); border-color:var(--line); background:rgba(255,255,255,.04); }
+      --max: 1080px;
+      --pad: clamp(16px, 4vw, 32px);
+      --r: 18px;
 
-    .hero{
-      padding:34px 0 18px;
-      display:grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap:22px;
-      align-items:stretch;
+      --serif: 'Instrument Serif', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
     }
-    @media (max-width: 900px){
-      .hero{ grid-template-columns:1fr; }
-    }
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.015));
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .heroMain{ padding:22px; }
-    .kicker{
-      color:var(--muted);
-      font-size:14px;
-      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
-    }
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-    .pill b{
-      font-weight:600;
-      color:var(--text);
-    }
-    h1{
-      margin:10px 0 6px;
-      font-size:44px;
-      line-height:1.08;
-      letter-spacing:-.6px;
-    }
-    @media (max-width: 520px){ h1{font-size:36px;} }
-    .subtitle{
-      margin:0 0 16px;
-      font-size:16px;
-      color:var(--muted);
-    }
-    .actions{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:10px 12px;
-      border-radius: 12px;
-      text-decoration:none;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color:var(--text);
-      font-weight:600;
-      font-size:14px;
-      transition: transform .08s ease, background .2s ease, border-color .2s ease;
-    }
-    .btn:hover{ background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.14); transform: translateY(-1px); }
-    .btnPrimary{
-      border-color: rgba(124,92,255,.45);
-      background: linear-gradient(135deg, rgba(124,92,255,.22), rgba(0,212,255,.14));
-    }
-    .btnPrimary:hover{ border-color: rgba(124,92,255,.7); }
 
-    .heroSide{ padding:18px; display:flex; flex-direction:column; gap:12px; }
-    .miniTitle{ font-size:13px; color:var(--muted); margin:0; letter-spacing:.2px; }
-    .kv{
-      display:grid;
-      grid-template-columns: 90px 1fr;
-      gap:10px 14px;
-      font-size:14px;
-      padding:12px;
-      border:1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(0,0,0,.18);
-    }
-    .k{ color:var(--muted); }
-    .v a{ color:var(--text); text-decoration:none; border-bottom:1px dashed rgba(255,255,255,.25); }
-    .v a:hover{ border-bottom-color: rgba(255,255,255,.45); }
-    .grid{
-      margin-top:18px;
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-    }
-    .col6{ grid-column: span 6; }
-    .col12{ grid-column: span 12; }
-    @media (max-width: 900px){
-      .col6{ grid-column: span 12; }
-    }
-    section{ scroll-margin-top: 90px; }
-    .sectionCard{ padding:18px; }
-    .sectionHead{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:16px;
-      margin-bottom:10px;
-    }
-    .sectionHead h2{
-      margin:0;
-      font-size:18px;
-      letter-spacing:-.2px;
-    }
-    .sectionHead .hint{
-      margin:0;
-      color:var(--muted);
-      font-size:13px;
-    }
-    .hr{
-      height:1px;
-      background: var(--line);
-      margin:12px 0 14px;
-    }
-    ul{ margin:0; padding-left:18px; color:var(--muted); }
-    li{ margin:6px 0; }
-    .twoCol{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    @media (max-width: 720px){ .twoCol{ grid-template-columns:1fr; } }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-    .tagRow{ display:flex; flex-wrap:wrap; gap:8px; }
-    .tag{
-      font-size:12px;
+    body {
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.65;
       color: var(--text);
-      padding:7px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-    .tagAccent{
-      border-color: rgba(53,242,166,.35);
-      background: rgba(53,242,166,.08);
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(ellipse 80vw 50vh at 10% -5%, rgba(107,82,255,0.13) 0%, transparent 60%),
+        radial-gradient(ellipse 60vw 40vh at 95% 5%, rgba(0,201,224,0.09) 0%, transparent 55%),
+        radial-gradient(ellipse 50vw 50vh at 50% 100%, rgba(46,239,171,0.06) 0%, transparent 55%);
+      -webkit-font-smoothing: antialiased;
     }
 
-    .xpItem{
-      padding:12px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.16);
-    }
-    .xpTop{
-      display:flex;
-      flex-wrap:wrap;
-      align-items:baseline;
-      justify-content:space-between;
-      gap:10px;
-    }
-    .role{ font-weight:700; }
-    .meta{ color:var(--muted); font-size:13px; }
-    .company{
-      color:var(--text);
-      font-weight:700;
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.028;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
     }
 
-    .proj{
-      padding:12px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.10));
-      display:flex;
-      flex-direction:column;
-      gap:10px;
+    /* ── NAV ── */
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      border-bottom: 1px solid var(--border);
+      background: rgba(6,8,15,0.72);
+      backdrop-filter: blur(16px) saturate(160%);
     }
-    .projHead{
-      display:flex; align-items:flex-start; justify-content:space-between; gap:10px;
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px var(--pad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
     }
-    .projTitle{ margin:0; font-weight:800; }
-    .projDesc{ margin:0; color:var(--muted); font-size:14px; }
-    .projActions{ display:flex; flex-wrap:wrap; gap:8px; }
-    .btnSmall{
-      padding:8px 10px;
-      border-radius: 12px;
-      font-size:13px;
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 500; font-size: 15px; letter-spacing: 0.01em;
     }
-    footer{
-      margin-top:26px;
-      color:var(--muted);
-      font-size:13px;
-      border-top:1px solid var(--line);
-      padding-top:18px;
+    .brand-mark {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--indigo), var(--cyan));
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-style: italic; font-size: 16px; color: #fff;
+      flex-shrink: 0;
     }
-    .note{
-      margin-top:10px;
-      font-size:13px;
+    .nav-links {
+      display: flex; gap: 4px;
+    }
+    .nav-links a {
+      font-size: 13.5px; font-weight: 400; color: var(--muted);
+      padding: 6px 12px; border-radius: 8px;
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--faint); }
+
+    /* ── LAYOUT ── */
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad) 80px; position: relative; z-index: 1; }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 64px 0 48px;
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 20px;
+      align-items: start;
+    }
+    @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+
+    .hero-left {}
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12.5px; color: var(--mint); font-weight: 500;
+      padding: 5px 12px; border-radius: 999px;
+      border: 1px solid rgba(46,239,171,0.25);
+      background: rgba(46,239,171,0.06);
+      margin-bottom: 22px;
+    }
+    .status-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--mint);
+      box-shadow: 0 0 0 3px rgba(46,239,171,0.2);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(46,239,171,0.2); }
+      50% { box-shadow: 0 0 0 6px rgba(46,239,171,0.08); }
+    }
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(48px, 7vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+    .hero-name em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--indigo) 0%, var(--cyan) 60%, var(--mint) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: 16px; color: var(--muted); font-weight: 300;
+      max-width: 480px; line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 12px; font-size: 14px; font-weight: 500;
+      border: 1px solid var(--border);
+      background: var(--faint);
+      color: var(--text);
+      transition: background 0.18s, border-color 0.18s, transform 0.1s;
+      cursor: pointer;
+    }
+    .btn:hover { background: rgba(255,255,255,0.06); border-color: var(--border-hover); transform: translateY(-1px); }
+    .btn-primary {
+      background: linear-gradient(135deg, rgba(107,82,255,0.28), rgba(0,201,224,0.18));
+      border-color: rgba(107,82,255,0.4);
+    }
+    .btn-primary:hover { border-color: rgba(107,82,255,0.65); }
+    .btn svg { width: 15px; height: 15px; opacity: 0.7; flex-shrink: 0; }
+
+    /* ── HERO CARD (right) ── */
+    .hero-card {
+      background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.015));
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 22px;
+    }
+    .card-label {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--muted); margin-bottom: 16px; font-weight: 500;
+    }
+    .info-row {
+      display: flex; gap: 8px; padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13.5px;
+    }
+    .info-row:last-of-type { border-bottom: none; }
+    .info-key { color: var(--muted); min-width: 68px; flex-shrink: 0; }
+    .info-val a { border-bottom: 1px dashed rgba(255,255,255,0.2); transition: border-color 0.15s; }
+    .info-val a:hover { border-bottom-color: rgba(255,255,255,0.45); }
+    .divider { height: 1px; background: var(--border); margin: 16px 0; }
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      font-size: 12px; font-weight: 400;
+      padding: 5px 10px; border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--faint);
       color: var(--muted);
     }
-    .kbd{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
-      font-size: 12px;
-      padding: 2px 6px;
-      border-radius: 8px;
-      border:1px solid var(--line);
-      background: rgba(0,0,0,.25);
-      color: var(--text);
+    .tag-hi { color: var(--text); border-color: rgba(46,239,171,0.3); background: rgba(46,239,171,0.07); }
+
+    /* ── SECTION GRID ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .c12 { grid-column: span 12; }
+    .c6  { grid-column: span 6; }
+    @media (max-width: 720px) { .c6 { grid-column: span 12; } }
+
+    /* ── SECTION CARD ── */
+    .scard {
+      background: linear-gradient(160deg, rgba(255,255,255,0.028), rgba(255,255,255,0.012));
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 24px;
+      scroll-margin-top: 80px;
+    }
+    .scard-head {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 12px; margin-bottom: 18px;
+    }
+    .scard-head h2 {
+      font-family: var(--serif); font-size: 22px; font-weight: 400;
+      letter-spacing: -0.01em; line-height: 1.2;
+    }
+    .scard-head .meta { font-size: 13px; color: var(--muted); }
+    .rule { height: 1px; background: var(--border); margin-bottom: 20px; }
+
+    /* ── EXPERIENCE ITEMS ── */
+    .xp-item {
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.18);
+      margin-bottom: 12px;
+    }
+    .xp-item:last-child { margin-bottom: 0; }
+    .xp-top {
+      display: flex; flex-wrap: wrap; align-items: baseline;
+      justify-content: space-between; gap: 6px; margin-bottom: 10px;
+    }
+    .xp-role { font-weight: 600; font-size: 15px; }
+    .xp-company { color: var(--text); font-weight: 500; }
+    .xp-meta { font-size: 13px; color: var(--muted); }
+    .xp-period {
+      font-size: 12px; color: var(--muted); font-weight: 400;
+      padding: 3px 10px; border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--faint);
+    }
+    ul.bullets { padding-left: 0; list-style: none; }
+    ul.bullets li {
+      font-size: 14px; color: var(--muted); padding: 5px 0 5px 20px;
+      border-bottom: 1px solid var(--border); position: relative;
+    }
+    ul.bullets li:last-child { border-bottom: none; }
+    ul.bullets li::before {
+      content: '→';
+      position: absolute; left: 0;
+      color: var(--indigo); font-size: 12px; top: 6px;
+    }
+
+    /* ── PROJECTS ── */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 720px) { .proj-grid { grid-template-columns: 1fr; } }
+
+    .proj {
+      padding: 18px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: linear-gradient(160deg, rgba(255,255,255,0.03), rgba(0,0,0,0.12));
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .proj-num {
+      font-size: 11px; color: var(--indigo); font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+    .proj-title { font-weight: 700; font-size: 15px; line-height: 1.3; }
+    .proj-desc { font-size: 13.5px; color: var(--muted); flex: 1; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .proj-tag {
+      font-size: 11.5px; color: var(--muted);
+      padding: 3px 9px; border-radius: 999px;
+      border: 1px solid var(--border);
+    }
+
+    /* ── SKILLS LAYOUT ── */
+    .skills-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 580px) { .skills-cols { grid-template-columns: 1fr; } }
+    .skill-group-label {
+      font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--muted); font-weight: 500; margin-bottom: 10px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 12px;
+      font-size: 13px; color: var(--muted);
+    }
+    .footer-brand { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--text); }
+
+    /* ── ANIMATIONS ── */
+    @media (prefers-reduced-motion: no-preference) {
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(18px);
+        transition: opacity 0.55s ease, transform 0.55s ease;
+      }
+      [data-reveal].visible {
+        opacity: 1;
+        transform: none;
+      }
     }
   </style>
 </head>
-
 <body>
-  <div class="nav">
-    <div class="navinner">
+
+  <!-- NAV -->
+  <nav class="nav" aria-label="Primary">
+    <div class="nav-inner">
       <div class="brand">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Yash Jadhav</span>
+        <div class="brand-mark" aria-hidden="true">Y</div>
+        Yash Jadhav
       </div>
-      <div class="navlinks" aria-label="Primary navigation">
-        <a href="#about">About</a>
+      <div class="nav-links">
         <a href="#education">Education</a>
-        <a href="#expertise">Expertise</a>
+        <a href="#expertise">Skills</a>
         <a href="#experience">Career</a>
         <a href="#projects">Projects</a>
       </div>
     </div>
-  </div>
+  </nav>
 
   <main class="wrap">
-    <div class="hero">
-      <div class="card heroMain">
-        <div class="kicker">
-          <span class="pill"><b>Agentic AI Developer</b></span>
-          <span class="pill">Remote (India)</span>
-          <span class="pill">Python • GenAI • GIS</span>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-left" data-reveal>
+        <div class="status-badge">
+          <span class="status-dot" aria-hidden="true"></span>
+          Open to new opportunities
         </div>
 
-        <h1>Yash Jadhav</h1>
-        <p class="subtitle">
-          Building agentic workflows, RAG systems, and geospatial automation pipelines with Python.
+        <h1 class="hero-name">
+          Agentic <em>AI</em><br>Developer
+        </h1>
+
+        <p class="hero-sub">
+          Building multi-agent systems, RAG pipelines, and geospatial automation workflows with Python. Based in India — available remotely.
         </p>
 
-        <div class="actions">
-          <a class="btn btnPrimary" href="mailto:yashjadhav0304@gmail.com">Email</a>
-          <a class="btn" href="tel:+919022515631">Call</a>
-          <a class="btn" href="https://www.linkedin.com/in/yash-jadhav-931931205/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/Yash-Jadhav-GIS" target="_blank" rel="noopener">GitHub</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:yashjadhav0304@gmail.com">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="16" height="13" rx="2"/><path d="m2 7 8 5 8-5"/></svg>
+            Get in touch
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/yash-jadhav-931931205/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path d="M17 2H3a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1ZM7 16H4.5v-7.5H7V16Zm-1.25-8.55a1.44 1.44 0 1 1 0-2.88 1.44 1.44 0 0 1 0 2.88ZM16 16h-2.5v-3.68c0-.88-.02-2-1.23-2-1.22 0-1.41.95-1.41 1.94V16H8.38V8.5h2.4v1.03h.03a2.63 2.63 0 0 1 2.37-1.3c2.54 0 3 1.67 3 3.84V16Z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn" href="https://github.com/Yash-Jadhav-GIS" target="_blank" rel="noopener">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C5.58 2 2 5.67 2 10.2c0 3.62 2.29 6.69 5.47 7.77.4.07.55-.18.55-.39v-1.38c-2.22.49-2.69-1.1-2.69-1.1-.36-.94-.89-1.19-.89-1.19-.73-.51.05-.5.05-.5.8.06 1.23.84 1.23.84.71 1.25 1.87.89 2.33.68.07-.53.28-.89.5-1.09-1.77-.2-3.63-.91-3.63-4.04 0-.89.31-1.62.82-2.19-.08-.2-.36-1.04.08-2.16 0 0 .67-.22 2.2.84A7.52 7.52 0 0 1 10 6.17c.68 0 1.36.09 2 .27 1.53-1.06 2.2-.84 2.2-.84.44 1.12.16 1.96.08 2.16.51.57.82 1.3.82 2.19 0 3.14-1.86 3.83-3.64 4.03.29.25.54.75.54 1.51v2.24c0 .21.14.47.55.39C15.72 16.89 18 13.82 18 10.2 18 5.67 14.42 2 10 2Z"/></svg>
+            GitHub
+          </a>
+          <a class="btn" href="tel:+919022515631">
+            <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.4 3.6C5.9 3 5 3 4.4 3.5l-1.1 1C1.9 5.8 2.5 8 3.7 9.7c1.7 2.4 4 4.8 6.5 6.5 1.7 1.2 3.9 1.8 5.3.4l1-1c.6-.6.6-1.5 0-2.1l-1.6-1.7c-.5-.6-1.4-.7-2-.2l-.9.7c-.4.3-1 .3-1.4-.1L7.9 9.5C7.5 9.1 7.5 8.5 7.8 8l.7-.9c.5-.6.4-1.5-.2-2L6.4 3.6Z"/></svg>
+            Call
+          </a>
         </div>
-
-        <p class="note">
-          Tip: For GitHub Pages, keep this file named <span class="kbd">index.html</span>.
-        </p>
       </div>
 
-      <aside class="card heroSide" aria-label="Quick info">
-        <p class="miniTitle">Quick Info</p>
-
-        <div class="kv">
-          <div class="k">Email</div>
-          <div class="v"><a href="mailto:yashjadhav0304@gmail.com">yashjadhav0304@gmail.com</a></div>
-
-          <div class="k">Phone</div>
-          <div class="v"><a href="tel:+919022515631">+91 9022515631</a></div>
-
-          <div class="k">Role</div>
-          <div class="v">Cartographer (NielsenIQ)</div>
-
-          <div class="k">Focus</div>
-          <div class="v">RAG • MAS • GIS automation • LLM fine-tuning</div>
+      <aside class="hero-card" data-reveal aria-label="Quick info">
+        <p class="card-label">Contact & Focus</p>
+        <div class="info-row">
+          <span class="info-key">Email</span>
+          <span class="info-val"><a href="mailto:yashjadhav0304@gmail.com">yashjadhav0304@gmail.com</a></span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">Phone</span>
+          <span class="info-val"><a href="tel:+919022515631">+91 90225 15631</a></span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">Current</span>
+          <span class="info-val">Cartographer — NielsenIQ</span>
+        </div>
+        <div class="info-row">
+          <span class="info-key">Location</span>
+          <span class="info-val">India (Remote)</span>
         </div>
 
-        <div class="hr"></div>
+        <div class="divider"></div>
 
-        <p class="miniTitle">Core Stack</p>
-        <div class="tagRow">
-          <span class="tag tagAccent">Python</span>
+        <p class="card-label">Core Stack</p>
+        <div class="tag-cloud">
+          <span class="tag tag-hi">Python</span>
           <span class="tag">LangChain</span>
           <span class="tag">LangGraph</span>
           <span class="tag">CrewAI</span>
@@ -351,93 +419,74 @@
           <span class="tag">QGIS / ArcGIS Pro</span>
         </div>
       </aside>
-    </div>
+    </section>
 
+    <!-- GRID SECTIONS -->
     <div class="grid">
-      <!-- Personal Info / About -->
-      <section id="about" class="card sectionCard col12">
-        <div class="sectionHead">
-          <h2>Personal Information</h2>
-          <p class="hint">A quick intro</p>
-        </div>
-        <div class="hr"></div>
-        <ul>
-          <li><b>Name:</b> Yash Jadhav</li>
-          <li><b>Email:</b> yashjadhav0304@gmail.com</li>
-          <li><b>Phone:</b> +91 9022515631</li>
-          <li><b>Headline:</b> Agentic AI Developer</li>
-          <li><b>Availability:</b> Remote (India)</li>
-        </ul>
-      </section>
 
       <!-- Education -->
-      <section id="education" class="card sectionCard col6">
-        <div class="sectionHead">
-          <h2>Education & Qualifications</h2>
-          <p class="hint">Academic background</p>
+      <section id="education" class="scard c6" data-reveal>
+        <div class="scard-head">
+          <h2>Education</h2>
+          <span class="meta">Academic background</span>
         </div>
-        <div class="hr"></div>
+        <div class="rule"></div>
 
-        <div class="xpItem">
-          <div class="xpTop">
+        <div class="xp-item">
+          <div class="xp-top">
             <div>
-              <div class="role">PG-Diploma in GenAI & Agentic AI</div>
-              <div class="meta">Indian Institute of Technology (Roorkee) • Online</div>
+              <div class="xp-role">PG-Diploma in GenAI & Agentic AI</div>
+              <div class="xp-meta">IIT Roorkee · Online</div>
             </div>
-            <div class="meta">2025–26</div>
+            <span class="xp-period">2025 – 26</span>
           </div>
         </div>
 
-        <div style="height:10px"></div>
-
-        <div class="xpItem">
-          <div class="xpTop">
+        <div class="xp-item">
+          <div class="xp-top">
             <div>
-              <div class="role">Masters in Geo-Informatics</div>
-              <div class="meta">Savitribai Phule Pune University • Pune, Maharashtra</div>
+              <div class="xp-role">Masters in Geo-Informatics</div>
+              <div class="xp-meta">Savitribai Phule Pune University · Pune</div>
             </div>
-            <div class="meta">2022–24</div>
+            <span class="xp-period">2022 – 24</span>
           </div>
         </div>
 
-        <div style="height:10px"></div>
-
-        <div class="xpItem">
-          <div class="xpTop">
+        <div class="xp-item">
+          <div class="xp-top">
             <div>
-              <div class="role">Bachelors of Science</div>
-              <div class="meta">RTM Nagpur University • Nagpur, Maharashtra</div>
+              <div class="xp-role">Bachelor of Science</div>
+              <div class="xp-meta">RTM Nagpur University · Nagpur</div>
             </div>
-            <div class="meta">2019–22</div>
+            <span class="xp-period">2019 – 22</span>
           </div>
         </div>
       </section>
 
       <!-- Expertise -->
-      <section id="expertise" class="card sectionCard col6">
-        <div class="sectionHead">
-          <h2>Expertise & Areas of Interest</h2>
-          <p class="hint">What you work on</p>
+      <section id="expertise" class="scard c6" data-reveal>
+        <div class="scard-head">
+          <h2>Expertise</h2>
+          <span class="meta">Tools & domains</span>
         </div>
-        <div class="hr"></div>
+        <div class="rule"></div>
 
-        <div class="twoCol">
+        <div class="skills-cols">
           <div>
-            <p class="miniTitle">Core Skills</p>
-            <div class="tagRow">
-              <span class="tag tagAccent">Python</span>
-              <span class="tag">EDA</span>
+            <p class="skill-group-label">AI & Data</p>
+            <div class="tag-cloud">
+              <span class="tag tag-hi">RAG</span>
+              <span class="tag tag-hi">Multi-Agent Systems</span>
+              <span class="tag">LLM Fine-tuning</span>
               <span class="tag">Prompt Engineering</span>
-              <span class="tag">Pipelines</span>
-              <span class="tag">RAG</span>
-              <span class="tag">MAS (Multi-Agent Systems)</span>
-              <span class="tag">Fine-tuning</span>
+              <span class="tag">EDA</span>
+              <span class="tag">ML Pipelines</span>
             </div>
           </div>
           <div>
-            <p class="miniTitle">Geospatial</p>
-            <div class="tagRow">
-              <span class="tag tagAccent">GIS</span>
+            <p class="skill-group-label">Geospatial</p>
+            <div class="tag-cloud">
+              <span class="tag tag-hi">GIS Automation</span>
               <span class="tag">Remote Sensing</span>
               <span class="tag">GeoPandas</span>
               <span class="tag">Rasterio</span>
@@ -447,196 +496,212 @@
           </div>
         </div>
 
-        <div class="hr"></div>
+        <div class="divider" style="margin-top:18px"></div>
 
-        <p class="miniTitle">Frameworks & Tools</p>
-        <ul>
-          <li><b>Data:</b> NumPy, Pandas, Matplotlib, Seaborn</li>
-          <li><b>ML/DL:</b> Scikit-learn, TensorFlow, Keras, PyTorch, Hugging Face Transformers</li>
-          <li><b>Agentic:</b> LangChain, LangGraph, AutoGen, CrewAI, Ollama, MLflow</li>
-          <li><b>Platforms:</b> VS Code, Google Colab, Jupyter, Anaconda, PyCharm</li>
-          <li><b>Other:</b> Git/GitHub, PostgreSQL, PowerBI, Excel</li>
-        </ul>
+        <div class="skills-cols">
+          <div>
+            <p class="skill-group-label">Frameworks</p>
+            <div class="tag-cloud">
+              <span class="tag">LangChain</span>
+              <span class="tag">LangGraph</span>
+              <span class="tag">CrewAI</span>
+              <span class="tag">AutoGen</span>
+              <span class="tag">Ollama</span>
+              <span class="tag">MLflow</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Scikit-learn</span>
+            </div>
+          </div>
+          <div>
+            <p class="skill-group-label">Tooling</p>
+            <div class="tag-cloud">
+              <span class="tag">Git / GitHub</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">PowerBI</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Matplotlib</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Career -->
-      <section id="experience" class="card sectionCard col12">
-        <div class="sectionHead">
-          <h2>Career (Company + Self-Employed)</h2>
-          <p class="hint">Work experience</p>
+      <section id="experience" class="scard c12" data-reveal>
+        <div class="scard-head">
+          <h2>Career</h2>
+          <span class="meta">Work experience</span>
         </div>
-        <div class="hr"></div>
+        <div class="rule"></div>
 
-        <div class="twoCol">
-          <div class="xpItem">
-            <div class="xpTop">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+          <div class="xp-item">
+            <div class="xp-top">
               <div>
-                <div class="role">Cartographer</div>
-                <div class="meta"><span class="company">NielsenIQ</span> • July 2024 – Present</div>
+                <div class="xp-role">Cartographer</div>
+                <div class="xp-meta"><span class="xp-company">NielsenIQ</span> · GIS & Data</div>
               </div>
-              <div class="meta">GIS / Data</div>
+              <span class="xp-period">July 2024 – Present</span>
             </div>
-            <ul>
-              <li>Georeferencing and creation of boundaries for different countries as per data frame.</li>
-              <li>Automated GIS tasks using Python to process and analyse vector data.</li>
-              <li>Developed scripts with PyQGIS and GeoPandas to clean, validate, and modify shapefiles.</li>
-              <li>Performed data validation, quality checks, and maintenance of geospatial data for error-free boundary maps.</li>
-              <li>Integrated data from multiple sources; automated merging, attribute updates, and geometry corrections at scale.</li>
+            <ul class="bullets">
+              <li>Georeferencing and boundary creation for multi-country data frames.</li>
+              <li>Automated GIS tasks with Python to process and analyse vector data at scale.</li>
+              <li>Built PyQGIS & GeoPandas scripts to clean, validate, and modify shapefiles.</li>
+              <li>Data validation and quality checks to maintain error-free boundary maps.</li>
+              <li>Automated merging, attribute updates, and geometry corrections from multiple sources.</li>
             </ul>
           </div>
 
-          <div class="xpItem">
-            <div class="xpTop">
+          <div class="xp-item">
+            <div class="xp-top">
               <div>
-                <div class="role">Python Mentor (Weekend Cohorts)</div>
-                <div class="meta">Self-employed • Project-based training</div>
+                <div class="xp-role">Python Mentor</div>
+                <div class="xp-meta">Self-employed · Weekend Cohorts</div>
               </div>
-              <div class="meta">Teaching</div>
+              <span class="xp-period">Project-based</span>
             </div>
-            <ul>
-              <li>Delivered Python training for data/GIS professionals (Pandas, Matplotlib, Seaborn, Scikit-learn).</li>
-              <li>Mentored 4+ batches (3–4 months each) on automation and end-to-end data processing projects.</li>
-              <li>Designed hands-on exercises and workflow optimization solutions to improve practical implementation.</li>
+            <ul class="bullets">
+              <li>Python training for data & GIS professionals (Pandas, Matplotlib, Scikit-learn).</li>
+              <li>Mentored 4+ batches (3–4 months each) on automation and data processing.</li>
+              <li>Designed hands-on exercises and workflow optimisation solutions.</li>
             </ul>
           </div>
         </div>
+        <style>
+          @media (max-width: 720px) {
+            #experience .scard > div[style] { grid-template-columns: 1fr !important; }
+          }
+        </style>
       </section>
 
       <!-- Projects -->
-      <section id="projects" class="card sectionCard col12">
-        <div class="sectionHead">
+      <section id="projects" class="scard c12" data-reveal>
+        <div class="scard-head">
           <h2>Projects</h2>
-          <p class="hint">Selected work</p>
+          <span class="meta">Selected work</span>
         </div>
-        <div class="hr"></div>
+        <div class="rule"></div>
 
-        <div class="grid" style="margin-top:0">
-          <div class="proj col6">
-            <div class="projHead">
-              <div>
-                <p class="projTitle">MAS Fitness & Diet (Multi-Agent AI System)</p>
-                <p class="projDesc">
-                  Multi-agent system for personalized fitness & diet planning using Python + LLM workflows,
-                  including user profiling, RAG, and expert agents.
-                </p>
-              </div>
+        <div class="proj-grid">
+
+          <div class="proj">
+            <div>
+              <div class="proj-num">01</div>
+              <div class="proj-title">MAS Fitness & Diet Planner</div>
             </div>
-            <ul>
-              <li>Dynamic pipeline with goal detection, structured JSON outputs, and PDF report generation (ReportLab).</li>
-              <li>Designed for scalable, fully automated health reports.</li>
-            </ul>
-            <div class="projActions">
-              <a class="btn btnSmall" href="#" data-link="todo">LINK (add URL)</a>
+            <p class="proj-desc">
+              Multi-agent system for personalised fitness and diet planning — user profiling, RAG, expert agents, and automated PDF report generation via ReportLab.
+            </p>
+            <div class="proj-tags">
+              <span class="proj-tag">LangGraph</span>
+              <span class="proj-tag">RAG</span>
+              <span class="proj-tag">CrewAI</span>
+              <span class="proj-tag">ReportLab</span>
             </div>
           </div>
 
-          <div class="proj col6">
-            <div class="projHead">
-              <div>
-                <p class="projTitle">Geospatial Data Automation Pipeline</p>
-                <p class="projDesc">
-                  High-performance pipeline converting large shapefiles into structured KML outputs using GeoPandas + Shapely.
-                </p>
-              </div>
+          <div class="proj">
+            <div>
+              <div class="proj-num">02</div>
+              <div class="proj-title">Geospatial Data Automation Pipeline</div>
             </div>
-            <ul>
-              <li>Geometry merging and automated polygon-level KML generation.</li>
-              <li>Multiprocessing + custom XML-based KML formatting to reduce manual effort and speed up workflows.</li>
-            </ul>
-            <div class="projActions">
-              <a class="btn btnSmall" href="#" data-link="todo">LINK (add URL)</a>
+            <p class="proj-desc">
+              High-performance pipeline converting large shapefiles into structured KML outputs using GeoPandas + Shapely, with multiprocessing and custom XML formatting.
+            </p>
+            <div class="proj-tags">
+              <span class="proj-tag">GeoPandas</span>
+              <span class="proj-tag">Shapely</span>
+              <span class="proj-tag">Multiprocessing</span>
+              <span class="proj-tag">KML</span>
             </div>
           </div>
 
-          <div class="proj col6">
-            <div class="projHead">
-              <div>
-                <p class="projTitle">Satellite Image Classification (Supervised ML)</p>
-                <p class="projDesc">
-                  Land cover classification using SVM, Random Forest, Decision Tree, XGBoost with preprocessing + feature engineering.
-                </p>
-              </div>
+          <div class="proj">
+            <div>
+              <div class="proj-num">03</div>
+              <div class="proj-title">Satellite Image Classification — Supervised</div>
             </div>
-            <ul>
-              <li>Evaluated model performance with accuracy metrics and generated classification maps.</li>
-              <li><span class="meta">College of Engineering Pune • Dec 2023 – Apr 2024</span></li>
-            </ul>
-            <div class="projActions">
-              <a class="btn btnSmall" href="#" data-link="todo">LINK (add URL)</a>
+            <p class="proj-desc">
+              Land cover classification with SVM, Random Forest, Decision Tree, and XGBoost. Full preprocessing, feature engineering, accuracy metrics, and classification maps.
+            </p>
+            <div class="proj-tags">
+              <span class="proj-tag">Scikit-learn</span>
+              <span class="proj-tag">XGBoost</span>
+              <span class="proj-tag">Remote Sensing</span>
             </div>
           </div>
 
-          <div class="proj col6">
-            <div class="projHead">
-              <div>
-                <p class="projTitle">Satellite Image Classification (Unsupervised ML)</p>
-                <p class="projDesc">
-                  Unsupervised pipeline for Sentinel-2B imagery using K-Means + PCA in Scikit-learn.
-                </p>
-              </div>
+          <div class="proj">
+            <div>
+              <div class="proj-num">04</div>
+              <div class="proj-title">Satellite Image Classification — Unsupervised</div>
             </div>
-            <ul>
-              <li>Preprocessing, feature extraction, clustering evaluation, and visual insights for coastal land analysis.</li>
-              <li><span class="meta">Savitribai Phule Pune University • Apr 2023 – July 2024</span></li>
-            </ul>
-            <div class="projActions">
-              <a class="btn btnSmall" href="#" data-link="todo">LINK (add URL)</a>
+            <p class="proj-desc">
+              Unsupervised pipeline for Sentinel-2B imagery using K-Means + PCA. Clustering evaluation and visual insights for coastal land analysis.
+            </p>
+            <div class="proj-tags">
+              <span class="proj-tag">K-Means</span>
+              <span class="proj-tag">PCA</span>
+              <span class="proj-tag">Sentinel-2B</span>
             </div>
           </div>
 
-          <div class="proj col6">
-            <div class="projHead">
-              <div>
-                <p class="projTitle">Flood Prediction (Logistic Regression)</p>
-                <p class="projDesc">
-                  Flood prediction model with preprocessing, training, evaluation, and visualizations for high-risk zones.
-                </p>
-              </div>
+          <div class="proj">
+            <div>
+              <div class="proj-num">05</div>
+              <div class="proj-title">Flood Prediction Model</div>
             </div>
-            <div class="projActions">
-              <a class="btn btnSmall" href="#" data-link="todo">LINK (add URL)</a>
+            <p class="proj-desc">
+              Logistic regression model for flood risk — preprocessing, training, evaluation, and visualisations to identify high-risk zones.
+            </p>
+            <div class="proj-tags">
+              <span class="proj-tag">Logistic Regression</span>
+              <span class="proj-tag">Scikit-learn</span>
+              <span class="proj-tag">Geospatial</span>
             </div>
           </div>
 
-          <div class="proj col6">
-            <div class="projHead">
-              <div>
-                <p class="projTitle">Automated NDVI for Sentinel Images</p>
-                <p class="projDesc">
-                  Automation pipeline to compute NDVI from Sentinel imagery formats (.img, .tiff) using Rasterio + NumPy.
-                </p>
-              </div>
+          <div class="proj">
+            <div>
+              <div class="proj-num">06</div>
+              <div class="proj-title">Automated NDVI for Sentinel Imagery</div>
             </div>
-            <ul>
-              <li>Generated visual outputs and GeoTIFFs for scalable vegetation health monitoring.</li>
-            </ul>
-            <div class="projActions">
-              <a class="btn btnSmall" href="#" data-link="todo">LINK (add URL)</a>
+            <p class="proj-desc">
+              Automation pipeline to compute NDVI from Sentinel imagery (.img, .tiff) with Rasterio and NumPy. Outputs GeoTIFFs for scalable vegetation health monitoring.
+            </p>
+            <div class="proj-tags">
+              <span class="proj-tag">Rasterio</span>
+              <span class="proj-tag">NumPy</span>
+              <span class="proj-tag">NDVI</span>
+              <span class="proj-tag">GeoTIFF</span>
             </div>
           </div>
+
         </div>
-
-        <p class="note">
-          <!-- When you’re ready, send the project URLs and I’ll replace each <span class="kbd">LINK (add URL)</span> button. -->
-        </p>
       </section>
-    </div>
+
+    </div><!-- /grid -->
 
     <footer>
-      <!-- © <span id="year"></span> Yash Jadhav • Built as a single-page portfolio for GitHub Pages. -->
+      <span class="footer-brand">Yash Jadhav</span>
+      <span>Agentic AI Developer · GIS Specialist · India</span>
     </footer>
+
   </main>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Safety: prevent placeholder links from navigating
-    document.querySelectorAll('a[data-link="todo"]').forEach(a => {
-      a.addEventListener("click", (e) => {
-        e.preventDefault();
-        // alert("Project link not added yet. Send me the URL for this project and I’ll update it.");
+    // Scroll reveal
+    const reveals = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          e.target.style.transitionDelay = (i * 0.04) + 's';
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
       });
-    });
+    }, { threshold: 0.08 });
+    reveals.forEach(el => io.observe(el));
   </script>
 </body>
 </html>
